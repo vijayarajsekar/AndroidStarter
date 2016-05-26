@@ -2434,6 +2434,28 @@ By calling <code>mActivityTestRule.launchActivity(null)</code>, I notify the tes
 <p><img src="https://raw.githubusercontent.com/RoRoche/AndroidStarter/master/assets/code_coverage_report.png" alt="Code coverage screenshot"></p>
 
 <h2>
+<a id="code-quality" class="anchor" href="#code-quality" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Code quality</h2>
+
+<p>A great article about this topic was written by <a href="http://vincentbrison.com/">Vincent Brison</a>: <a href="http://vincentbrison.com/2014/07/19/how-to-improve-quality-and-syntax-of-your-android-code/">"How to improve quality and syntax of your Android code"</a>. In this article, some useful tools are listed:</p>
+
+<ul>
+<li><a href="http://checkstyle.sourceforge.net/">Checkstyle</a></li>
+<li><a href="http://findbugs.sourceforge.net/">FindBugs</a></li>
+<li><a href="http://pmd.github.io/">PMD</a></li>
+<li><a href="http://tools.android.com/tips/lint">Android Lint</a></li>
+</ul>
+
+<p>Vincent Brison shows us how to combine and use them with Gradle.</p>
+
+<p>First, we can go to the <a href="https://github.com/vincentbrison/vb-android-app-quality">associated repository</a> and copy the <code>config</code> at the root level of our project.</p>
+
+<p>Then, we just have to add the following line in our <code>app/build.gradle</code> file:</p>
+
+<div class="highlight highlight-source-groovy"><pre>apply <span class="pl-c1">from</span>: <span class="pl-s"><span class="pl-pds">'</span>../config/quality.gradle<span class="pl-pds">'</span></span></pre></div>
+
+<p>Finally, when running the <code>gradle check</code> command at the project root level, it automatically runs these tools, producing associated reports in the <code>app/build/reports</code> folder.</p>
+
+<h2>
 <a id="relevant-libraries" class="anchor" href="#relevant-libraries" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Relevant libraries</h2>
 
 <ul>
@@ -2504,7 +2526,22 @@ By calling <code>mActivityTestRule.launchActivity(null)</code>, I notify the tes
 <p>Android Library for Setting a View via Fluent Interface</p>
 </blockquote>
 
+<ul>
+<li><a href="https://github.com/nantaphop/FluentView">https://github.com/nantaphop/FluentView</a></li>
+</ul>
+
 <p><img src="https://raw.githubusercontent.com/RoRoche/AndroidStarter/master/assets/logo_fluentview.jpeg" alt="FluentView logo"></p>
+</li>
+<li>
+<p>AndroidDevMetrics</p>
+
+<blockquote>
+<p>Performance metrics library for Android development.</p>
+</blockquote>
+
+<ul>
+<li><a href="https://github.com/frogermcs/AndroidDevMetrics">https://github.com/frogermcs/AndroidDevMetrics</a></li>
+</ul>
 </li>
 </ul>
 
