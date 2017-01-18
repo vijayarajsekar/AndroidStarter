@@ -1,0 +1,8 @@
+title: Androidstarter
+description: A sample Android app using the MVP architecture.
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-cayman
+
+gems:
+  - jekyll-mentions
